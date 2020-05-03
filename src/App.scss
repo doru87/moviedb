@@ -1,0 +1,257 @@
+$greyDark: #040404;
+$greyLight: #131313;
+$greyLighter: #282828;
+$greyText: #b3b3b3;
+$greyNav: #090909;
+$greenMain: #1db954;
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+  }
+.App {
+    height: 100vh;
+    background:rgb(43, 38, 46);
+    display:flex;
+
+
+}
+a {
+    text-decoration: none;
+}
+.navBar {
+    width:220px;
+    height: 100%;
+    background: $greyDark;
+    display:flex;
+    flex-direction: column;
+    .logo{
+        padding:1.5rem;
+
+    }
+    ul {
+        padding: 0.5rem;
+        li {
+            color:white;
+            border-radius: 5px;
+            padding:0.6rem;
+            font-size: 0.9rem;
+            cursor:pointer;
+            transition: all 0.3s ease-in-out;
+            display:flex;
+            align-items: center;
+            svg {
+                fill:$greyText;
+                margin-right:15px
+            }
+            &.active{
+                background: $greyLight;
+            }
+            &:hover{
+                color:white;
+            }
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+}
+.outerWrap {
+    height:100vh;
+    min-height: 100%;
+    background: grey;
+}
+
+.main {
+    width:100%;
+    overflow-y: scroll;
+    position: relative;
+    .upperNav {
+        background: $greyDark;
+        width:100%;
+        height:50px;
+        color:white;
+        padding:7px;
+        position:fixed;
+        z-index:1;
+        opacity: 0.6;
+        
+    }
+    .mainContent {
+        color:white;
+        position: relative;
+        padding:2rem;
+        margin-top: 50px;
+        h1 {
+            font-size: 1.5rem;
+        }
+ 
+    }
+    .searchWrapper{
+        display:flex;
+        flex-direction: row;
+    }
+    .searchButton {
+        width:100px;
+        height:40px;
+        border-radius: 10%;
+        background: $greyDark;
+        color:white;
+        margin-left:10px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 50px;
+    }
+
+    .cardsWrap{
+        margin-bottom: 1.5rem;
+        margin-top:50px;
+        .movieName {
+            width:100%;
+            height:50px;
+            h2 {
+                text-align: center;
+            }
+        }
+
+        .popularity {
+            text-align: center;
+            width:100%;
+        }
+        .card {
+            background: black;
+            color:white;
+            width:320px;
+            height: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            padding:1.2rem;
+            border-radius: 10px;
+            margin-top:20px;
+            margin-bottom:30px;
+            position: relative;
+            box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+       
+            &:hover {
+                .playIcon{
+                    opacity:1;
+                }
+            }
+            .cardImage {
+                height:200px;
+                box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.3),
+                0 1px 2px 0 rgba(0, 0, 0, 0.2);
+                img {
+                    width:100%;
+                    height:100%;
+                 
+                }
+            }
+            .iframeWrapper iframe {
+                margin: 0 auto;
+                display:block;
+            }
+        }
+
+        .cardContent {
+            padding:0.4rem;
+            margin-top: 20px;
+            h3 {
+                font-weight: 600;
+                font-size: 0.9rem;
+                letter-spacing: 0.6px;
+            }
+            span {
+                font-size: 0.8rem;
+                color:$greyText;
+            }
+        }
+    }
+
+    .movies-wrapper {
+        margin-top:50px;
+    }
+    .movies-card {
+        display: flex;
+        flex-direction: row;
+        margin:0 auto;
+        width: 1200px;
+        height:auto;
+        background: $greyDark;
+        position: relative;
+        .imageCard {
+            height:600px;
+            padding:30px;
+            img{
+                height:100%;
+            }
+        }
+        .seriesImageCard {
+            padding:30px;
+        }
+    
+        .movieDetails {
+            display: flex;
+            flex-direction: column;
+         
+            .movieTitle {
+                height:50px;
+                span {
+                    font-size: 28px;
+                }
+            }
+            .movieTitle,.releaseDate,.budget,.genres,.overview,.trailer,.networks,.seasons {
+                padding:10px; 
+            }
+
+            .networks img {
+                margin-left: 10px;
+                width:50px;
+            }
+            .addFavoriteButton {
+                width:100px;
+                height:40px;
+                border-radius: 10%;
+                background: $greyDark;
+                color:white;
+                margin-left:10px;
+                position:absolute;
+                top:20px;
+                right:20px;
+            }
+        }
+    
+    }
+}
+
+.libraryWrapper ul {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.libraryWrapper ul li {
+    list-style: none;
+    position:relative;
+
+    a {
+        color: white;
+    }
+    span {
+        position:absolute;
+        top:30%;
+        margin-left:10px;
+    }
+    button {
+        position: absolute;
+        margin-left: 270px;
+    }
+}
+
+.libraryWrapper img {
+    width:100px;
+}
